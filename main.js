@@ -2,27 +2,36 @@ import { LinkedList } from "./linked-list.js"
 
 const list = new LinkedList();
 
+// append()
 list.append("dog");
 list.append("cat");
 list.append("snake");
 list.append("turtle");
 
+// prepend()
 list.prepend("parrot");
 list.prepend("hamster");
+// hamster -> parrot -> dog -> cat -> snake -> turtle
 
-console.log(list.size());
+// size()
+console.log(list.size()); // 6
 
-console.log(list.head());
+// head()
+console.log(list.head()); // hamster
 
-console.log(list.tail());
+// tail()
+console.log(list.tail()); // turtle
 
-console.log(list.at(1));
-console.log(list.at(2));
-console.log(list.at(1000));
+// at()
+console.log(list.at(1)); // parrot
+console.log(list.at(2)); // dog
+console.log(list.at(1000)); 
+// Invalid at() arguments
 console.log(list.at(-1));
 console.log(list.at("1"));
 console.log(list.at("abc"));
 
-console.log(list.tail());
-console.log(list.pop());
-console.log(list.tail());
+// pop()
+console.log(list.tail()); // turtle
+console.log(list.pop()); // turtle
+console.log(list.tail()); // snake
