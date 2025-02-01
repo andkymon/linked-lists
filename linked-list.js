@@ -80,4 +80,17 @@ export class LinkedList {
 
         return poppedNode;
     }
+
+    contains(value) {
+        let searchPointer = this.headNode;
+
+        // Stop when searchPointer points to null, not to tail
+        while (searchPointer !== null) { 
+            if (value === searchPointer.value) {
+                return true;
+            }
+            searchPointer = searchPointer.nextNode;
+        }
+        return false;
+    }
 }

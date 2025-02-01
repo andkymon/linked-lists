@@ -35,3 +35,7 @@ console.log(list.at("abc"));
 console.log(list.tail()); // turtle
 console.log(list.pop()); // turtle
 console.log(list.tail()); // snake
+
+// contains()
+console.log(list.contains("snake")); //true
+console.log(list.contains("eagle")); //false
