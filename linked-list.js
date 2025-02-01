@@ -67,4 +67,17 @@ export class LinkedList {
 
         return searchPointer;
     }
+
+    pop() {
+        let searchPointer = this.headNode;
+
+        // Stop when searchPointer points to node before tail
+        while (searchPointer.nextNode.nextNode !== null) { 
+            searchPointer = searchPointer.nextNode;
+        }
+        const poppedNode = searchPointer.nextNode;
+        searchPointer.nextNode = null;
+        
+        return poppedNode;
+    }
 }

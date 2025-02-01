@@ -22,3 +22,7 @@ console.log(list.at(1000));
 console.log(list.at(-1));
 console.log(list.at("1"));
 console.log(list.at("abc"));
+
+console.log(list.tail());
+console.log(list.pop());
+console.log(list.tail());
