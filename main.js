@@ -37,5 +37,11 @@ console.log(list.pop()); // turtle
 console.log(list.tail()); // snake
 
 // contains()
-console.log(list.contains("snake")); //true
-console.log(list.contains("eagle")); //false
+console.log(list.contains("snake")); // true
+console.log(list.contains("eagle")); // false
+
+// find()
+console.log(list.find("hamster")); // 0
+console.log(list.find("parrot")); // 1
+console.log(list.find("snake")); // 4 
+console.log(list.find("eagle")); // Node not found

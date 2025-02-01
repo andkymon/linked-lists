@@ -30,7 +30,7 @@ export class LinkedList {
         let searchPointer = this.headNode;
         let count = 0;
 
-        // Stop when searchPointer points to null, not to tail
+        // Stop when searchPointer points to null
         while (searchPointer !== null) { 
             count++;
             searchPointer = searchPointer.nextNode;
@@ -59,6 +59,10 @@ export class LinkedList {
             return console.error("Invalid index selected");
         }
 
+        if (this.headNode === null) {
+            return console.error("List empty");
+        }
+
         let searchPointer = this.headNode;
 
         for (let i = 0; i < index; i++) {   
@@ -69,6 +73,10 @@ export class LinkedList {
     }
 
     pop() {
+        if (this.headNode === null) {
+            return console.error("List empty");
+        }
+
         let searchPointer = this.headNode;
 
         // Stop when searchPointer points to node before tail
@@ -84,7 +92,7 @@ export class LinkedList {
     contains(value) {
         let searchPointer = this.headNode;
 
-        // Stop when searchPointer points to null, not to tail
+        // Stop when searchPointer points to null
         while (searchPointer !== null) { 
             if (value === searchPointer.value) {
                 return true;
@@ -92,5 +100,25 @@ export class LinkedList {
             searchPointer = searchPointer.nextNode;
         }
         return false;
+    }
+
+    find(value) {
+        if (this.headNode === null) {
+            return console.error("List empty");
+        }
+
+        let searchPointer = this.headNode;
+        let index = 0;
+
+        // Stop when searchPointer points to null
+        while (searchPointer !== null) { 
+            if (value === searchPointer.value) {
+                return index;
+            }
+            index++;
+            searchPointer = searchPointer.nextNode;
+        }
+
+        return console.error("Node not found");
     }
 }
