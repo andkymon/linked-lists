@@ -121,4 +121,17 @@ export class LinkedList {
 
         return console.error("Node not found");
     }
+
+    toString() {
+        let string = "";
+        let searchPointer = this.headNode;
+
+        while (searchPointer !== null) { 
+            string += `( ${searchPointer.value} ) -> `
+            searchPointer = searchPointer.nextNode;
+        }
+
+        string += "null";
+        return string;
+    }
 }

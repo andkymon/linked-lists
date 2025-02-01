@@ -45,3 +45,8 @@ console.log(list.find("hamster")); // 0
 console.log(list.find("parrot")); // 1
 console.log(list.find("snake")); // 4 
 console.log(list.find("eagle")); // Node not found
+
+// toString()
+console.log(list.toString()); // ( hamster ) -> ( parrot ) -> ( dog ) -> ( cat ) -> ( snake ) -> null
+const list2 = new LinkedList();
+console.log(list2.toString()); // null
