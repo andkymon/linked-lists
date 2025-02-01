@@ -53,4 +53,18 @@ export class LinkedList {
 
         return searchPointer;
     }
+
+    at(index) {
+        if (index >= this.size() || index < 0 || !Number.isInteger(index)) {
+            return console.error("Invalid index selected");
+        }
+
+        let searchPointer = this.headNode;
+
+        for (let i = 0; i <= index; i++) {   
+            searchPointer = searchPointer.nextNode;
+        }
+
+        return searchPointer;
+    }
 }
