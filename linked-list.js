@@ -61,7 +61,7 @@ export class LinkedList {
 
         let searchPointer = this.headNode;
 
-        for (let i = 0; i <= index; i++) {   
+        for (let i = 0; i < index; i++) {   
             searchPointer = searchPointer.nextNode;
         }
 
@@ -77,7 +77,7 @@ export class LinkedList {
         }
         const poppedNode = searchPointer.nextNode;
         searchPointer.nextNode = null;
-        
+
         return poppedNode;
     }
 }
