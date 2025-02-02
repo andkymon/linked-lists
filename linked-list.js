@@ -134,4 +134,24 @@ export class LinkedList {
         string += "null";
         return string;
     }
+
+    insertAt(value, index) {
+        if (index > this.size() || index < 0 || !Number.isInteger(index)) {
+            return console.error("Invalid index selected");
+        }
+
+        if (this.headNode === null && index === 0) {
+            this.prepend(value);
+            return;
+        }
+
+        let searchPointer = this.headNode;
+
+        // Stop when searchPointer points to node before desired index
+        for (let i = 0; i < index - 1; i++) {   
+            searchPointer = searchPointer.nextNode;
+        }
+
+        searchPointer.nextNode = new Node(value, searchPointer.nextNode);
+    }
 }

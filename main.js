@@ -50,3 +50,10 @@ console.log(list.find("eagle")); // Node not found
 console.log(list.toString()); // ( hamster ) -> ( parrot ) -> ( dog ) -> ( cat ) -> ( snake ) -> null
 const list2 = new LinkedList();
 console.log(list2.toString()); // null
+
+// insertAt()
+list.insertAt("cow", 2); 
+console.log(list.toString()); // ( hamster ) -> ( parrot ) -> ( cow ) -> ( dog ) -> ( cat ) -> ( snake ) -> ( turtle ) -> null
+list2.insertAt("cow", 2); // Invalid index selected
+list2.insertAt("cow", 0); 
+console.log(list2.toString()); // (cow) -> null
