@@ -2,6 +2,17 @@ import { LinkedList } from "./linked-list.js"
 
 const list = new LinkedList();
 
+list.append("dog");
+list.append("cat");
+list.append("parrot");
+list.append("hamster");
+list.append("snake");
+list.append("turtle");
+
+console.log(list.toString());
+
+// Test cases - Uncomment the following lines to test the linked list methods
+/*
 // append()
 list.append("dog");
 list.append("cat");
@@ -64,3 +75,4 @@ list.removeAt(0); // Removes hamster
 list.removeAt(2); // Removes dog
 console.log(list.toString());
 list.removeAt(1000); // Invalid index selected
+*/
