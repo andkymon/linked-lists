@@ -57,3 +57,10 @@ console.log(list.toString()); // ( hamster ) -> ( parrot ) -> ( cow ) -> ( dog )
 list2.insertAt("cow", 2); // Invalid index selected
 list2.insertAt("cow", 0); 
 console.log(list2.toString()); // (cow) -> null
+
+// removeAt()
+console.log(list.toString());
+list.removeAt(0); // Removes hamster
+list.removeAt(2); // Removes dog
+console.log(list.toString());
+list.removeAt(1000); // Invalid index selected

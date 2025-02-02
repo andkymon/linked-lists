@@ -154,4 +154,28 @@ export class LinkedList {
 
         searchPointer.nextNode = new Node(value, searchPointer.nextNode);
     }
+
+    removeAt(index) {
+        if (index > this.size() || index < 0 || !Number.isInteger(index)) {
+            return console.error("Invalid index selected");
+        }
+
+        if (this.headNode === null) {
+            return console.error("List empty");
+        }
+
+        if (index === 0) {
+            this.headNode = this.headNode.nextNode;
+            return;
+        }
+
+        let searchPointer = this.headNode;
+
+        // Stop when searchPointer points to node before desired index
+        for (let i = 0; i < index - 1; i++) {   
+            searchPointer = searchPointer.nextNode;
+        }
+
+        searchPointer.nextNode = searchPointer.nextNode.nextNode;
+    }
 }
